@@ -8,11 +8,14 @@ html { box-sizing: border-box;}
 
 /*GENERAL*/
 
-* {
-	margin: 0;
+html {
+  max-width: 1200px;
+  
+  margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+
 }
+
 
 body {
 	font-family: 'Cabin', sans-serif;
@@ -31,31 +34,33 @@ header {
 }
 
 
-nav p {
+header p {
   font-family: 'Great Vibes';
   font-size: 55px;
-  padding: 20px;
+  padding: 0 20px;
 
 }
 
-/* nav styles */
+
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0px 100px;
+  padding: 0px 80px;
   
 }
 
-ul {
+
+nav ul {
 	list-style: none;
 	display: flex;
 	
 }
 
-li a {
+
+nav li a {
+  display: inline-block;
 	text-align: center;
 	padding: 20px;
-	display: inline-block;
   color: #232323;
   font-size: 20px; 
   text-decoration: none;
@@ -64,117 +69,161 @@ li a {
 
 
 .feature {
-	display: flex;
+  display: flex;
 	justify-content: center;
-  text-align: center;
-  padding: 150px 0;
-	
+  align-items: center;
+
 }
+
 
 h1 {
   font-family: 'Cabin';
   font-size: 32px;
   
-  
 }
+
 
 span {
   font-family: 'Great Vibes';
   font-size: 120px;
   display: block;
+  justify-content: center;
+  align-items: center;
 
 }
 
+
+
+
+/* mobile */
+@media (max-width: 600px) {
+header,
+nav p {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   
+      
+nav ul {
+        flex-direction: column;
+        justify-content: center;
+      } 
+
+nav li {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    
 
 
 
 /* MAIN
 section 1*/
 
-
 .about {
-  display: block;
+  display: flex;
+  flex-direction: column;
 	justify-content: center;
-  text-align: center;
+  align-items: center;
   height: 50vh;
   background-color: #eaedf4; 
 
-  
-  
 }
 
 
 h2 {
   font-family: 'Great Vibes';
   font-size: 42px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 80px;
+  margin: 0;
+  padding: 0;
+
 }
+
 
 p {
   font-family: 'Cabin';
   font-size: 18px;
   line-height: 29px;
-  margin-left: auto;
-  margin-right: auto;
   width: 70%;
-  padding: 20px;
 
 }
+
 
 button {
   background: #FDC800;
   color: #232323;
   border: none;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
   width: 20%;
-  
 
 }
 
 
 .icon {
-  
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   height: 25vh;
   background-color: black;
   color:white;
   
-  
-  
 }
+
 
 .icon ul {
-  height: 100px;
-  width: 100px;
-
+  display: flex;
+	justify-content: center;
+  align-items: center;
+	list-style: none;
+  margin: 0;
+  padding: 0;
 
 }
+
 
 .icon img {
+
   height: 100px;
   width: 100px;
-  margin: 20px 20px 0px 20px;
+  margin: 0;
+  padding: 0;
 
 
 }
+/* mobile */
+@media (max-width: 600px) {
+  .icon {
+    flex-direction: column;
+    justify-content: center;
+  }
 
+   
+      
+.icon ul {
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+
+.icon li {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
 
 .gallery {
   height: 40vh;
-  background-color: #f8f8f8; 
-  display: block;
-  justify-content: space-evenly;
 
   }
 
-.gallery li {
-
-  margin-left: auto;
-  margin-right: auto;
+.gallery ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 30px 0 0 0;
 
 
   }
@@ -183,7 +232,77 @@ button {
 .gallery img {
   height: 200px;
   width: 200px;
-
-
+  margin: 0;
+  padding: 0 0 0 20px;
 
   }
+
+
+  /* mobile */
+@media (max-width: 600px) {
+  .gallery, img {
+    flex-direction: column;
+    justify-content: center;
+
+  }
+    
+  .gallery ul {
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+
+  .gallery li {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+
+
+.cookingTips {
+  height: 30vh;
+  background-color: #f8f8f8; 
+
+}
+
+.cookingTips h2, p, button {
+  display: flex;
+  flex-direction: column;
+    
+}
+
+.cookingTips h2 {
+  font-family: 'cabin';
+  font-size: 20px;
+ 
+}
+
+.cookingTips p {
+  font-family: 'cabin';
+  font-size: 18px;
+}
+
+.popularRecipes {
+  height: 30vh;
+  background-color: #f8f8f8; 
+}
+
+.popularRecipes h2 {
+  font-family: 'cabin';
+  font-size: 20px;
+}
+
+.popularRecipes h2, p, button {
+  display: flex;
+  flex-direction: column;
+    
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .cookingTips, .popularRecipes{
+    flex-direction: column;
+    justify-content: center;
+  }
+    }
